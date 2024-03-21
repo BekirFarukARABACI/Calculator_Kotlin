@@ -10,10 +10,12 @@
 
     <GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="409dp"
-        android:layout_height="308dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp"
         android:columnCount="4"
         android:orientation="horizontal"
+        android:padding="16sp"
         android:rowCount="5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -158,7 +160,7 @@
             android:layout_row="3"
             android:layout_column="3"
             android:backgroundTint="#FF5722"
-            android:text="X"
+            android:text="*"
             android:textSize="32sp" />
 
         <Button
@@ -217,11 +219,10 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:text="TextView"
+        android:layout_height="100sp"
+        android:layout_marginBottom="4dp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/gridLayout"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596"
         tools:layout_editor_absoluteX="0dp" />
 
     <androidx.constraintlayout.widget.Barrier
@@ -230,6 +231,16 @@
         android:layout_height="wrap_content"
         app:barrierDirection="top"
         app:constraint_referenced_ids="gridLayout" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="125sp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
